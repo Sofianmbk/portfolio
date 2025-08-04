@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/044646dee0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="assets/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-texte">
+            <p>Développeur web</p>
+            <h1>Salut,<br> moi c'est <span>Sofian</span> 👋</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="assets/about.jpg" alt="À propos de moi">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">À Propos</h1>
+                <p>
+                    Je m’appelle <span>Sofian</span>, j’ai <span>15 ans</span> et je suis <span>développeur web autodidacte</span>.
+                    Depuis que j’ai découvert la création de sites, je consacre mon temps à apprendre, expérimenter et réaliser des <span>projets concrets</span>.<br><br>
+                    Je conçois des sites <span>modernes</span>, rapides et <span>adaptés</span> aux besoins de chacun — que ce soit pour un particulier, un petit commerce ou un projet personnel.
+                    <span>Mon but</span> est simple : offrir un service de <span>qualité</span>, à un <span>prix accessible</span>, tout en continuant à progresser dans ce domaine qui me passionne.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------services---------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Mes Services</h1>
+        <div class="services-list">
+            <div>
+                <h2 class="emoji">💼</h2>
+                <h2>Création de site vitrines</h2>
+                <p>Sites web simples et élégants pour présenter un commerce, une activité, une association ou un portfolio.</p>
+            </div>
+            <div>
+                <h2 class="emoji">✒️</h2>
+                <h2>Design personnalisé</h2>
+                <p>Je crée des designs modernes et adaptés à l'image de votre projet, avec une attention particulière aux détails.</p>
+            </div>
+            <div>
+                <h2 class="emoji">✨</h2>
+                <h2>Accompagnement & Conseils</h2>
+                <p>Je vous aide à choisir ce qui est le plus adapté à vos besoins, même si vous n'y connaissez rien au web.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------projets---------- -->
+<div id="projets">
+    <div class="container">
+        <h1 class="sub-title">Mes projets</h1>
+        <div class="projets-list">
+            <div class="projet">
+                <img src="assets/Capture d'écran 2025-08-02 155846.png" alt="Pizza Bella">
+                <div class="layer">
+                    <h2>Pizza Bella</h2>
+                    <p>Un site vitrine moderne pour une pizzeria fictive, avec menu, panier interactif, design responsive.</p>
+                    <a href="https://sofianmbk.github.io/pizza-bella/">Voir</a>
+                </div>
+                <a href="https://sofianmbk.github.io/pizza-bella/" class="mobile-link">Voir</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------contacts---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Me Contacter</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> sofian.mbk.pro@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sofian.mbk.pro?igsh=MWp5d2Framc2ZjJmMg=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@sofian.mbk.pro?_t=ZN-8yaGgxQLBWI&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@sofianmbkpro"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Votre nom" required>
+                    <input type="email" name="Email" placeholder="Votre email" required>
+                    <textarea name="Message" rows="6" placeholder="Votre message"></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Portfolio de Sofian — Développeur Web. Tous droits réservés.</p>
+    </div>
+</div>
+
+<!-- ----------scripts---------- -->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby5ywAWLJ3ikAtvYWIk2DdX0ttqDOcJVOWwxgD7fiXl9awTe9lIKVnlg8TVaxPTankl/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message envoyé"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
