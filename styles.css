@@ -436,7 +436,12 @@ nav .fas {
     .copyright {
         font-size: 14px;
     }
+
+    .services-list div h2 {
+        font-size: 25px;
+    }
 }
+
  #msg {
     color: #61b752;
     margin-top: -40px;
