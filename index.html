@@ -15,16 +15,16 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="assets/logo.png" class="logo">
+            <img src="assets/logo.png" class="logo" alt="Logo Sofian" loading="lazy">
             <ul id="sidemenu">
                 <li><a href="#header">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contacts</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+                <li class="menu-close"><i class="fas fa-times" onclick="closemenu()" role="button" aria-label="Fermer le menu"></i></li>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+            <i class="fas fa-bars" onclick="openmenu()" role="button" aria-label="Ouvrir le menu"></i>
         </nav>
         <div class="header-texte">
             <p>Développeur web</p>
@@ -79,20 +79,33 @@
 
 <!-- ----------projets---------- -->
 <div id="projets">
-    <div class="container">
-        <h1 class="sub-title">Mes projets</h1>
-        <div class="projets-list">
-            <div class="projet">
-                <img src="assets/Capture d'écran 2025-08-02 155846.png" alt="Pizza Bella">
-                <div class="layer">
-                    <h2>Pizza Bella</h2>
-                    <p>Un site vitrine moderne pour une pizzeria fictive, avec menu, panier interactif, design responsive.</p>
-                    <a href="https://sofianmbk.github.io/pizza-bella/">Voir</a>
-                </div>
-                <a href="https://sofianmbk.github.io/pizza-bella/" class="mobile-link">Voir</a>
-            </div>
+  <div class="container">
+    <h1 class="sub-title">Mes projets</h1>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" aria-label="Précédent">⟨</button>
+
+      <div class="carousel-track">
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+          <img src="assets/Capture%20d%27%C3%A9cran%202025-08-02%20155846.png" alt="Pizza Bella">
+          <h2>Pizza Bella</h2>
+          <p>Site vitrine moderne pour une pizzeria fictive.</p>
+          <a href="https://sofianmbk.github.io/pizza-bella/" target="_blank">Voir</a>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img src="assets/Screenshot_2025-12-04_15_05_05.png" alt="Informatique Assistance 83">
+          <h2>Informatique Assistance 83</h2>
+          <p>Site vitrine pour un service d’assistance informatique dans le Var.</p>
+          <a href="https://www.informatique-assistance83.fr/" target="_blank">Voir</a>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Suivant">⟩</button>
     </div>
+  </div>
 </div>
 
 <!-- ----------contacts---------- -->
@@ -154,6 +167,30 @@
       })
       .catch(error => console.error('Error!', error.message))
   })
+</script>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
 </script>
 
 </body>
