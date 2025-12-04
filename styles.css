@@ -594,3 +594,17 @@ nav .fas {
   .carousel-btn.prev { left: 8px; }
   .carousel-btn.next { right: 8px; }
 }
+
+/* Titres par défaut */
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left; /* alignement initial */
+}
+
+/* Centrer uniquement certains titres */
+#services .sub-title,
+#projets .sub-title {
+  text-align: center;
+}
