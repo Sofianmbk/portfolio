@@ -594,9 +594,11 @@ nav .fas {
   .carousel-btn.prev { left: 8px; }
   .carousel-btn.next { right: 8px; }
 
-/* Centrer le contenu des services en responsive */
   .services-list div {
     text-align: center;
+    word-wrap: break-word;       /* force le retour à la ligne */
+    overflow-wrap: break-word;   /* version moderne */
+    hyphens: auto;               /* ajoute des tirets si nécessaire */
   }
 
   .services-list div h2 {
