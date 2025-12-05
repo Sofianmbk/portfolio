@@ -384,7 +384,7 @@ form .btn {
 
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 36%;
   transform: translateY(-50%);
   background: #ff004f;
   color: #fff;
@@ -555,7 +555,7 @@ nav .fas {
   }
 
   .carousel-btn {
-    top: 32%;                    /* centré verticalement */
+    top: 30%;                    /* centré verticalement */
     transform: translateY(-50%);
     padding: 8px 14px;
     font-size: 14px;
@@ -593,6 +593,21 @@ nav .fas {
 
   .carousel-btn.prev { left: 8px; }
   .carousel-btn.next { right: 8px; }
+
+/* Centrer le contenu des services en responsive */
+  .services-list div {
+    text-align: center;
+  }
+
+  .services-list div h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .services-list div p {
+    text-align: center;
+  }
+
 }
 
 /* Titres par défaut */
